@@ -6,3 +6,8 @@ dist/
 *.db
 data/
 .DS_Store
+.venv/
+venv/
+*.egg-info/
+.idea/
+.vscode/

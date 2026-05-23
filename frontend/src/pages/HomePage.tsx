@@ -6,7 +6,7 @@ import {
   Briefcase, GraduationCap, FolderGit2, Award,
   Globe, Cpu, ChevronDown, ChevronUp
 } from 'lucide-react'
-import { cn } from '../lib/utils'
+import { cn, ensureUrl } from '../lib/utils'
 
 type Status = 'idle' | 'uploading' | 'success' | 'error'
 
@@ -209,13 +209,13 @@ export default function HomePage() {
                   </span>
                 )}
                 {result.linkedin && (
-                  <a href={result.linkedin} target="_blank" rel="noopener noreferrer"
+                  <a href={ensureUrl(result.linkedin)} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <Linkedin size={11}/> LinkedIn
                   </a>
                 )}
                 {result.github && (
-                  <a href={result.github} target="_blank" rel="noopener noreferrer"
+                  <a href={ensureUrl(result.github)} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <Github size={11}/> GitHub
                   </a>
