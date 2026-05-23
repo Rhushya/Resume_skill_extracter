@@ -11,6 +11,13 @@ Built with:
 
 ---
 
+## Live Deployment
+
+- Frontend: https://resume-skill-extracter.vercel.app/
+- Backend: https://resume-skill-extractor-backend.onrender.com
+
+---
+
 ## Assignment Criteria Checklist
 
 | Requirement | Status |
