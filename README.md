@@ -1,4 +1,4 @@
-# 🧠 Resume Skill Extractor
+# Resume Skill Extractor
 
 An AI-powered web app that parses PDF resumes and extracts structured data — name, email, phone,
 skills, work experience, education, and projects — using **Groq's Llama 3.3 70B** model.
@@ -11,21 +11,21 @@ Built with:
 
 ---
 
-## ✅ Assignment Criteria Checklist
+## Assignment Criteria Checklist
 
 | Requirement | Status |
 |---|---|
-| Upload PDF through GUI | ✅ |
-| Extract name, email, phone, skills, experience | ✅ |
-| Display in clean summary view | ✅ |
-| Store results for later access (SQLite) | ✅ |
-| Filter resumes by skill tags | ✅ Bonus |
-| Dockerized — runs via docker compose | ✅ |
-| Simple, explainable codebase | ✅ |
+| Upload PDF through GUI | Yes |
+| Extract name, email, phone, skills, experience | Yes |
+| Display in clean summary view | Yes |
+| Store results for later access (SQLite) | Yes |
+| Filter resumes by skill tags | Yes (bonus) |
+| Dockerized — runs via docker compose | Yes |
+| Simple, explainable codebase | Yes |
 
 ---
 
-## 🔑 Step 1 — Get Your Groq API Key
+## Step 1 — Get Your Groq API Key
 
 1. Go to **https://console.groq.com**
 2. Sign in (free) → API Keys → **Create API Key**
@@ -33,7 +33,7 @@ Built with:
 
 ---
 
-## 🐳 Option A — Run with Docker (for your demo video)
+## Option A — Run with Docker (for your demo)
 
 > **Requirements:** Docker Desktop installed and running
 
@@ -62,7 +62,7 @@ docker compose down
 
 ---
 
-## 💻 Option B — Run Locally (for development / Windsurf)
+## Option B — Run Locally (for development)
 
 > **Requirements:** Python 3.10+, Node.js 18+
 
@@ -104,7 +104,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 resume-skill-extractor/
@@ -136,7 +136,7 @@ resume-skill-extractor/
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -149,7 +149,7 @@ resume-skill-extractor/
 
 ---
 
-## 🔧 How It Works (explain this in your video)
+## How It Works
 
 ```
 User uploads PDF
@@ -172,24 +172,7 @@ React frontend displays the structured result
 
 ---
 
-## 🎬 Video Walkthrough Script (7 minutes)
-
-| Time | What to show |
-|---|---|
-| **0:00 – 0:30** | Open Windsurf, show blank project, state the goal |
-| **0:30 – 1:30** | Show `extractor.py` — explain the Groq prompt + JSON parsing |
-| **1:30 – 2:30** | Show `routes/resume.py` + `database.py` — explain FastAPI route flow |
-| **2:30 – 4:00** | Live demo — upload your own resume PDF, show extracted result |
-| **4:00 – 5:00** | Show History page — search by skill (e.g., "Python") |
-| **5:00 – 6:00** | Run `docker compose up`, open `localhost:3000`, repeat demo |
-| **6:00 – 7:00** | Explain Windsurf usage + what you'd improve next |
-
-**One-line explanation to use:** 
-> "The app extracts raw text from the PDF using pdfplumber, sends it to Groq's Llama 3.3 with a structured JSON prompt, parses the response, and stores it in SQLite — the React frontend then renders each field in a clean card view."
-
----
-
-## ❓ Common Issues
+## Common Issues
 
 | Problem | Fix |
 |---|---|
