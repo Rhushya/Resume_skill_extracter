@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: resume-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - DB_PATH=/app/data/resumes.db
+    volumes:
+      - resume_data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: resume-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  resume_data:
